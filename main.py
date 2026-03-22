@@ -29,10 +29,10 @@ print(f"Дата народження: {my_name + ', 2006.12.01'}")
 
 ch = "https://istories.media/workshops/2020/11/11/vvedenie-v-python-chast2-stroki/"
 
-print("Рядок складається із чисел") if ch.isnumeric() else print("Рядок не складається із чисел")
+print("Рядок складається із чисел") if ch.isdigit() else print("Рядок не складається із чисел")
 print("Рядок складається із чисел або букв") if ch.isalnum() else print("Рядок не складається із чисел або букв")
 print("Рядок складається із символів у нижньому регістрі") if ch.islower() else print("Рядок не складається із символів у нижньому регістрі")
-print("Рядок складається із символів, що не відображаються") if ch.isspace() or not all(not ch.isprintable() for ch in ch) else print("Рядок не складається із символів, що не відображаються")
+print("Рядок складається із символів, що не відображаються") if all(not c.isprintable() for c in ch) else print("Рядок не складається із символів, що не відображаються")
 print("Рядок містить підрядок '11'") if ch.find("11") != -1 else print("Рядок не містить підрядок '11'")
 
 # 3
@@ -64,12 +64,12 @@ print(f"Всі символи у зворотному порядку: {s[::-1]}\
 # Розділити цей рядок на два за розподільником знак оклику.
 
 sentences = s.split("!")
-sentences[1] = sentences[1].replace(" a ", " any ")
+sentences[1] = " ".join(["any" if w.strip(".,!") == "a" else w for w in sentences[1].split()])
 result = "!".join(sentences)
 
 print(f"Видалити пробіли на початку та наприкінці рядка: {s.strip()}\n")
 print(f"Зробити початок усіх слів із заголовної (великої літери): {s.title()}\n")
-print(f"Підрахувати, скільки разів в рядок входить артикль 'a': {s.split().count('a')}\n")
+print(f"Підрахувати, скільки разів в рядок входить артикль 'a': {sum(1 for word in s.split() if word.strip(".,!") == "a")}\n")
 print(f"Знайти індекс першого входження артиклю 'a': {s.find(' a ')}\n")
 print(f"Замінити артикль 'a' на займенник 'any' тільки у другому реченні: {result}\n")
 print(f"Розділити цей рядок на два за розподільником знак оклику: {s.split('!')}\n") 
