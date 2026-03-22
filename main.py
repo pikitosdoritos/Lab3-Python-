@@ -14,7 +14,7 @@ my_name = "Фастовець Нікіта Миколайович"
 print(f"Довжина рядка: {len(my_name)}\n")
 print(f"Кількість пробілів у рядку: {my_name.count(' ')}\n")
 print(f"Ім'я та прізвище: {my_name.split()[1]} {my_name.split()[0]}\n")
-print(f"Ініціали: {my_name[0]}{my_name.split()[1][0]}{my_name.split()[2][0]}")
+print(f"Ініціали: {my_name[0]}.{my_name.split()[1][0]}.{my_name.split()[2][0]}.")
 print(f"Прописні літери: {my_name.upper()}\n")
 print(f"Дата народження: {my_name + ', 2006.12.01'}")
 
