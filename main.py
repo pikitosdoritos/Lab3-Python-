@@ -14,7 +14,7 @@ my_name = "Фастовець Нікіта Миколайович"
 print(f"Довжина рядка: {len(my_name)}\n")
 print(f"Кількість пробілів у рядку: {my_name.count(' ')}\n")
 print(f"Ім'я та прізвище: {my_name.split()[1]} {my_name.split()[0]}\n")
-print(f"Ініціали: {my_name.split()[0][0]}.{my_name.split()[1][0]}.{my_name.split()[2][0]}\n")
+print(f"Ініціали: {my_name[0]}{my_name.split()[1][0]}{my_name.split()[2][0]}")
 print(f"Прописні літери: {my_name.upper()}\n")
 print(f"Дата народження: {my_name + ', 2006.12.01'}")
 
@@ -29,10 +29,10 @@ print(f"Дата народження: {my_name + ', 2006.12.01'}")
 
 ch = "https://istories.media/workshops/2020/11/11/vvedenie-v-python-chast2-stroki/"
 
-print("Рядок складаєьтся із чисел") if ch.isnumeric() else print("Рядок не складаєьтся із чисел")
-print("Рядок складаєьтся із чисел або букв") if ch.isalnum() else print("Рядок не складаєьтся із чисел або букв")
-print("Рядок складаєьтся із символів у нижньому регістрі") if ch.islower() else print("Рядок не складаєьтся із символів у нижньому регістрі")
-print("Рядок складаєьтся із символів, що не відображаються") if ch.isspace() or not ch.isprintable() else print("Рядок не складаєьтся із символів, що не відображаються")
+print("Рядок складається із чисел") if ch.isnumeric() else print("Рядок не складається із чисел")
+print("Рядок складається із чисел або букв") if ch.isalnum() else print("Рядок не складається із чисел або букв")
+print("Рядок складається із символів у нижньому регістрі") if ch.islower() else print("Рядок не складається із символів у нижньому регістрі")
+print("Рядок складається із символів, що не відображаються") if ch.isspace() or not ch.isprintable() else print("Рядок не складається із символів, що не відображаються")
 print("Рядок містить підрядок '11'") if ch.find("11") != -1 else print("Рядок не містить підрядок '11'")
 
 # 3
