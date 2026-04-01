@@ -18,7 +18,7 @@ print(f"Ініціали: {my_name[0]}.{my_name.split()[1][0]}.{my_name.split()[
 print(f"Прописні літери: {my_name.upper()}\n")
 print(f"Дата народження: {my_name + ', 2006.12.01'}")
 
-# 2
+# Завдання №2
 # Для рядка визначити
 # ” https://istories.media/workshops/2020/11/11/vvedenie-v-python-chast2-stroki/ ”
 # чи складається рядок із цифр;
