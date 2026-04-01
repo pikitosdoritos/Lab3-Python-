@@ -35,7 +35,7 @@ print("Рядок складається із символів у нижньом
 print("Рядок складається із символів, що не відображаються") if all(not c.isprintable() for c in ch) else print("Рядок не складається із символів, що не відображаються")
 print("Рядок містить підрядок '11'") if ch.find("11") != -1 else print("Рядок не містить підрядок '11'")
 
-# 3
+# Завдання №3
 # Для рядка
 # “ Don't worry, it's a piece of cake, there will be no problem! Choose a
 # job you love, and you will never have to work a day in your life!!! ’
